@@ -24,7 +24,7 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-#COPY xdebug.ini /etc/php/7.0/mods-available/xdebug.ini
+COPY xdebug.ini /etc/php/7.0/mods-available/xdebug.ini
 
 COPY start-container /usr/local/bin/start-container
 RUN chmod +x usr/local/bin/start-container
